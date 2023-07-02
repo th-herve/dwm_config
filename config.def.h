@@ -116,6 +116,9 @@ static const Key keys[] = {
     { 0, XF86XK_AudioRaiseVolume, spawn, {.v = raise_volume } },
     { 0, XF86XK_AudioNext, spawn, {.v = media_next } },
     { 0, XF86XK_AudioPrev, spawn, {.v = media_prev } },
+
+    { MODKEY, XK_c, spawn, SHCMD("~/.config/rofi/scripts/launcher_t5") },
+
 };
 
 /* button definitions */

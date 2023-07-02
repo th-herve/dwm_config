@@ -72,6 +72,7 @@ static const char *media_next[] =  { "playerctl", "next", NULL };
 static const char *media_prev[] =  { "playerctl", "previous", NULL };
 static const char *lower_volume[] =  { "amixer","-c",  "1", "sset","PCM", "2%-", NULL };
 static const char *raise_volume[] =  { "amixer","-c",  "1", "sset","PCM", "2%+", NULL };
+static const char *rofi_vim_wiki[] =  { "/home/adiantum/.config/rofi/scripts/launcher_t5", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -116,6 +117,8 @@ static const Key keys[] = {
     { 0, XF86XK_AudioRaiseVolume, spawn, {.v = raise_volume } },
     { 0, XF86XK_AudioNext, spawn, {.v = media_next } },
     { 0, XF86XK_AudioPrev, spawn, {.v = media_prev } },
+    { MODKEY, XK_c, spawn, SHCMD("~/.config/rofi/scripts/launcher_t5") },
+
 };
 
 /* button definitions */
