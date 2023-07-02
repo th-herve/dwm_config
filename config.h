@@ -8,15 +8,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#1a1826";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_gray3[]       = "#6e6c7e";
+static const char col_gray4[]       = "#cad3f5";
+static const char col_cyan[]        = "#96cdfb";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_cyan, col_gray1,  col_cyan  },
 };
 
 /* tagging */
@@ -34,6 +34,7 @@ static const Rule rules[] = {
 	{ "Google-chrome",  NULL,       NULL,       1 << 2,       0,           -1 },
     { "discord",        NULL,       NULL,       1 << 5,       0,           -1 },
     { "Spotify",        NULL,       NULL,       1 << 6,       0,           -1 },
+    { "steam",          NULL,       NULL,       1 << 7,       0,           -1 },
 };
 
 /* layout(s) */
