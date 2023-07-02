@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -59,6 +60,11 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char *media_toggle[] =  { "playerctl","--player=spotify",  "play-pause", NULL };
+static const char *media_next[] =  { "playerctl", "next", NULL };
+static const char *media_prev[] =  { "playerctl", "previous", NULL };
+static const char *lower_volume[] =  { "amixer","-c",  "1", "sset","PCM", "2%-", NULL };
+static const char *raise_volume[] =  { "amixer","-c",  "1", "sset","PCM", "2%+", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,6 +101,13 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_5,                      7)
 	TAGKEYS(                        XK_6,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+    /* custom key */
+    { 0, XF86XK_AudioPlay, spawn, {.v = media_toggle } },
+    { 0, XF86XK_AudioLowerVolume, spawn, {.v = lower_volume } },
+    { 0, XF86XK_AudioRaiseVolume, spawn, {.v = raise_volume } },
+    { 0, XF86XK_AudioNext, spawn, {.v = media_next } },
+    { 0, XF86XK_AudioPrev, spawn, {.v = media_prev } },
 };
 
 /* button definitions */
