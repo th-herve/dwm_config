@@ -13,4 +13,4 @@ mouse_accel_id=$(xinput list-props $mouse_id | awk -F '\(|\)' '/.*Accel Profile 
 xinput set-prop $mouse_id $mouse_accel_id 0, 1 
 
 # set bg
-feh --bg-scale Pictures/wallpaper/cat_desk.png 
+feh --bg-scale ~/.dwm/cat_desk.png 
