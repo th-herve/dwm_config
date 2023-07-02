@@ -108,7 +108,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      6)
 	TAGKEYS(                        XK_5,                      7)
 	TAGKEYS(                        XK_6,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_z,      quit,           {0} },
 
     /* custom key */
     { 0, XF86XK_AudioPlay, spawn, {.v = media_toggle } },
