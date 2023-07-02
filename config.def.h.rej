@@ -1,10 +1,19 @@
 --- config.def.h
 +++ config.def.h
-@@ -20,6 +20,7 @@ static const char *colors[][3]      = {
+@@ -60,6 +60,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn()
+ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+ static const char *termcmd[]  = { "st", NULL };
  
- /* tagging */
- static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-+static const char *alttags[] = { "<01>", "<02>", "<03>", "<04>", "<05>" };
++#include "exitdwm.c"
+ static Key keys[] = {
+ 	/* modifier                     key        function        argument */
+ 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+@@ -94,7 +95,7 @@ static Key keys[] = {
+ 	TAGKEYS(                        XK_7,                      6)
+ 	TAGKEYS(                        XK_8,                      7)
+ 	TAGKEYS(                        XK_9,                      8)
+-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
++	{ MODKEY|ShiftMask,             XK_e,      exitdwm,       {0} },
+ };
  
- static const Rule rules[] = {
- 	/* xprop(1):
+ /* button definitions */

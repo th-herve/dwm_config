@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
+#include "exitdwm.c"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -108,16 +109,16 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      6)
 	TAGKEYS(                        XK_5,                      7)
 	TAGKEYS(                        XK_6,                      8)
-	{ MODKEY|ShiftMask,             XK_z,      quit,           {0} },
 
     /* custom key */
-    { 0, XF86XK_AudioPlay, spawn, {.v = media_toggle } },
-    { 0, XF86XK_AudioLowerVolume, spawn, {.v = lower_volume } },
-    { 0, XF86XK_AudioRaiseVolume, spawn, {.v = raise_volume } },
-    { 0, XF86XK_AudioNext, spawn, {.v = media_next } },
-    { 0, XF86XK_AudioPrev, spawn, {.v = media_prev } },
+    { 0, XF86XK_AudioPlay,          spawn,      {.v = media_toggle } },
+    { 0, XF86XK_AudioLowerVolume,   spawn,      {.v = lower_volume } },
+    { 0, XF86XK_AudioRaiseVolume,   spawn,      {.v = raise_volume } },
+    { 0, XF86XK_AudioNext,          spawn,      {.v = media_next } },
+    { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } },
 
-    { MODKEY, XK_c, spawn, SHCMD("~/.config/rofi/scripts/launcher_t5") },
+    { MODKEY,   XK_c,               spawn,      SHCMD("~/.config/rofi/scripts/launcher_t5") },
+	{ MODKEY,   XK_z,               exitdwm,    {0} },
 
 };
 
