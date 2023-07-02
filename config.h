@@ -85,15 +85,15 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_space,  zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_x,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_Return, setlayout,      {0} },
+	/* { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} }, */
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -117,8 +117,9 @@ static const Key keys[] = {
     { 0, XF86XK_AudioNext,          spawn,      {.v = media_next } },
     { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } },
 
-    { MODKEY,   XK_c,               spawn,      SHCMD("~/.config/rofi/scripts/launcher_t5") },
-	{ MODKEY,   XK_z,               exitdwm,    {0} },
+    { MODKEY,               XK_c,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t5") },
+	{ MODKEY,               XK_z,       exitdwm,        {0} },
+    { MODKEY,               XK_space,   focusmaster,    {0} },
 
 };
 
