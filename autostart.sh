@@ -8,10 +8,10 @@ spotify &
 
 getDate(){
     currentDate="$(date +'%H:%M')"
-    echo -e " $currentDate"
+    echo -e "$currentDate"
 }
 
 while true; do
-    xsetroot -name "$(getDate)"
-    sleep 1m
+    xsetroot -name " $(getDate)"
+    sleep 1s
 done &
