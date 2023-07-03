@@ -120,6 +120,7 @@ static const Key keys[] = {
     { MODKEY,               XK_c,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t5") },
 	{ MODKEY,               XK_z,       exitdwm,        {0} },
     { MODKEY,               XK_space,   focusmaster,    {0} },
+    { MODKEY,   XK_v,       spawn,  SHCMD("greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
 
 };
 
