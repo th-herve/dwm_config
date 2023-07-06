@@ -3,7 +3,7 @@
 firefox &
 google-chrome &
 spotify &
-greenclip daemon &
+# greenclip daemon &
 
 # Bar config
 getDate(){
