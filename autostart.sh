@@ -11,7 +11,13 @@ getDate(){
     echo -e "$currentDate"
 }
 
+getBattery() {
+    currentBattery="$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{ print $2 }')"
+    echo -e "$currentBattery"
+}
+
+
 while true; do
-    xsetroot -name " $(getDate)"
+    xsetroot -name " $(getDate) $(getBattery)"
     sleep 1s
 done &
