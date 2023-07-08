@@ -13,5 +13,5 @@ getDate(){
 
 while true; do
     xsetroot -name " $(getDate)"
-    sleep 1s
+    sleep 1m
 done &
