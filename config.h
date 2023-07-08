@@ -121,6 +121,7 @@ static const Key keys[] = {
 	{ MODKEY,               XK_z,       exitdwm,        {0} },
     { MODKEY,               XK_space,   focusmaster,    {0} },
     { MODKEY,   XK_v,       spawn,  SHCMD("greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
+    { MODKEY,   XK_n,       spawn,  SHCMD("~/.dwm/script/network.sh") },
 
 };
 
