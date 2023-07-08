@@ -117,6 +117,9 @@ static const Key keys[] = {
     { 0, XF86XK_AudioNext,          spawn,      {.v = media_next } },
     { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } },
 
+    { 0, XF86XK_MonBrightnessUp,    spawn,      SHCMD("xbacklight -inc 10") },
+    { 0, XF86XK_MonBrightnessDown,  spawn,      SHCMD("xbacklight -dec 10") },
+
     { MODKEY,               XK_c,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t5") },
 	{ MODKEY,               XK_z,       exitdwm,        {0} },
     { MODKEY,               XK_space,   focusmaster,    {0} },
