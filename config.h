@@ -121,7 +121,7 @@ static const Key keys[] = {
 	{ MODKEY,               XK_z,       exitdwm,        {0} },
     { MODKEY,               XK_space,   focusmaster,    {0} },
     { MODKEY,   XK_v,       spawn,  SHCMD("greenclip print | grep . | dmenu  -fn  'JetBrainsMono Nerd Font:size=10' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
-    /* { MODKEY,               XK_v,       spawn,          {.v = dmenu_greenclip} }, */
+    { MODKEY,   XK_n,       spawn,  SHCMD("~/.dwm/script/network.sh") },
 };
 
 /* button definitions */
