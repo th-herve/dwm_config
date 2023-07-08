@@ -71,8 +71,8 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *media_toggle[] =  { "playerctl","--player=spotify",  "play-pause", NULL };
 static const char *media_next[] =  { "playerctl", "next", NULL };
 static const char *media_prev[] =  { "playerctl", "previous", NULL };
-static const char *lower_volume[] =  { "amixer","-c",  "1", "sset","PCM", "2%-", NULL };
-static const char *raise_volume[] =  { "amixer","-c",  "1", "sset","PCM", "2%+", NULL };
+static const char *lower_volume[] =  { "amixer","-c",  "0", "sset","Master", "2%-", NULL };
+static const char *raise_volume[] =  { "amixer","-c",  "0", "sset","Master", "2%+", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
