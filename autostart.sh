@@ -2,7 +2,7 @@
 
 firefox &
 google-chrome &
-spotify &
+# spotify &
 # greenclip daemon &
 
 # Bar config
