@@ -81,7 +81,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
@@ -126,6 +126,8 @@ static const Key keys[] = {
     { MODKEY,   XK_v,       spawn,  SHCMD("greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
     { MODKEY,   XK_n,       spawn,  SHCMD("~/.dwm/script/network.sh") },
 
+    { MODKEY,   XK_u,           spawn,          SHCMD("setxkbmap us") },
+    { MODKEY,   XK_i,           spawn,          SHCMD("setxkbmap us -variant intl") },
 };
 
 /* button definitions */
