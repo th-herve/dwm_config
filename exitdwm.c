@@ -45,7 +45,7 @@ void exitdwm ()
 			S_FORMAT (EXIT) "\n"
 			S_FORMAT (REBOOT) "\n"
 			S_FORMAT (SHUTDOWN)
-			"\" | dmenu -p exit: | " S_FORMAT_CLEAR
+			"\" | dmenu -p exit: -fn 'JetBrainsMono Nerd Font:size=10'  -nb '#1a1826' -nf '#cad3f5' -sb '#96cdfb' -sf '#1a1826' | " S_FORMAT_CLEAR
 		,
 		"r"
 	);
