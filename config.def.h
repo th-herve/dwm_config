@@ -84,7 +84,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
@@ -99,10 +99,10 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	/* { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } }, */
+	/* { MODKEY,                       XK_period, focusmon,       {.i = +1 } }, */
+	/* { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } }, */
+	/* { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } }, */
 	TAGKEYS(                        XK_q,                      0)
 	TAGKEYS(                        XK_w,                      1)
 	TAGKEYS(                        XK_e,                      2)
@@ -120,11 +120,14 @@ static const Key keys[] = {
     { 0, XF86XK_AudioNext,          spawn,      {.v = media_next } },
     { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } },
 
-    { MODKEY,               XK_c,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t5") },
-	{ MODKEY,               XK_z,       exitdwm,        {0} },
-    { MODKEY,               XK_space,   focusmaster,    {0} },
-    { MODKEY,   XK_v,       spawn,  SHCMD("greenclip print | grep . | dmenu  -fn  'JetBrainsMono Nerd Font:size=10' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
-    { MODKEY,   XK_n,       spawn,  SHCMD("~/.dwm/script/network.sh") },
+    { MODKEY,   XK_c,           spawn,          SHCMD("~/.config/rofi/scripts/launcher_t5") },
+	{ MODKEY,   XK_z,           exitdwm,        {0} },
+    { MODKEY,   XK_space,       focusmaster,    {0} },
+    { MODKEY,   XK_v,           spawn,          SHCMD("greenclip print | grep . | dmenu  -fn  'JetBrainsMono Nerd Font:size=10' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
+    { MODKEY,   XK_n,           spawn,          SHCMD("~/.dwm/script/network.sh") },
+
+    { MODKEY,   XK_u,           spawn,          SHCMD("setxkbmap us") },
+    { MODKEY,   XK_i,           spawn,          SHCMD("setxkbmap us -variant intl") },
 };
 
 /* button definitions */
