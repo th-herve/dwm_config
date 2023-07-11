@@ -5,6 +5,9 @@ google-chrome &
 # spotify &
 # greenclip daemon &
 
+# make tab work as mod4 if hold
+./script/tab_mod.sh
+
 # Bar config
 getDate(){
     currentDate="$(date +'%H:%M')"
@@ -12,7 +15,6 @@ getDate(){
 }
 
 getBattery() {
-
     state="$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state | awk '{ print $2 }')"
     currentBattery="$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{ print $2 }' | awk -F'%' '{print $1}')"
 
