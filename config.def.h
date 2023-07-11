@@ -126,7 +126,7 @@ static const Key keys[] = {
     { MODKEY,   XK_v,       spawn,  SHCMD("greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
     { MODKEY,   XK_n,       spawn,  SHCMD("~/.dwm/script/network.sh") },
 
-    { MODKEY,   XK_u,           spawn,          SHCMD("setxkbmap us") },
+    { MODKEY,   XK_u,           spawn,          SHCMD("xmodmap ~/.Xmodmap") },
     { MODKEY,   XK_i,           spawn,          SHCMD("setxkbmap us -variant intl") },
 };
 
