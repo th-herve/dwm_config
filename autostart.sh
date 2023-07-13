@@ -3,10 +3,12 @@
 firefox &
 google-chrome &
 # spotify &
-# greenclip daemon &
+greenclip daemon &
 
 # make tab work as mod4 if hold
-./script/tab_mod.sh
+# ./script/tab_mod.sh
+
+feh --bg-scale ~/.dwm/cat_desk.png 
 
 # Bar config
 getDate(){
