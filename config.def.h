@@ -128,6 +128,7 @@ static const Key keys[] = {
 
     { MODKEY,   XK_u,           spawn,          SHCMD("setxkbmap us") },
     { MODKEY,   XK_i,           spawn,          SHCMD("setxkbmap us -variant intl") },
+    { MODKEY|ShiftMask,     XK_n,       spawn,          SHCMD("dmenu-bluetooth -fn  'JetBrainsMono Nerd Font:size=10' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -l 20 -p ' '") },
 };
 
 /* button definitions */
