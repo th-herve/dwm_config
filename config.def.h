@@ -121,6 +121,7 @@ static const Key keys[] = {
     { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } },
 
     { MODKEY,               XK_c,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t5") },
+    { MODKEY|ShiftMask,     XK_d,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t2") },
 	{ MODKEY,               XK_z,       exitdwm,        {0} },
     { MODKEY,               XK_space,   focusmaster,    {0} },
     { MODKEY,               XK_v,       spawn,          SHCMD("greenclip print | grep . | dmenu  -fn  'JetBrainsMono Nerd Font:size=10' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
