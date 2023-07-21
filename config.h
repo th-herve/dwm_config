@@ -73,6 +73,7 @@ static const char *media_next[] =  { "playerctl", "next", NULL };
 static const char *media_prev[] =  { "playerctl", "previous", NULL };
 static const char *lower_volume[] =  { "amixer","-c",  "0", "sset","Master", "2%-", NULL };
 static const char *raise_volume[] =  { "amixer","-c",  "0", "sset","Master", "2%+", NULL };
+static const char *mute_toggle[] =  { "amixer","set", "Master", "toggle", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -111,11 +112,12 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_6,                      8)
 
     /* custom key */
-    { 0, XF86XK_AudioPlay,              spawn,          {.v = media_toggle } },
     { 0, XF86XK_AudioLowerVolume,       spawn,          {.v = lower_volume } },
     { 0, XF86XK_AudioRaiseVolume,       spawn,          {.v = raise_volume } },
-    { 0, XF86XK_AudioNext,              spawn,          {.v = media_next } },
-    { 0, XF86XK_AudioPrev,              spawn,          {.v = media_prev } },
+    { 0, XF86XK_AudioMute,              spawn,          {.v = mute_toggle }  },
+    { 0, XF86XK_AudioPlay,              spawn,          {.v = media_toggle } },
+    /* { 0, XF86XK_AudioNext,              spawn,          {.v = media_next }   }, */
+    /* { 0, XF86XK_AudioPrev,              spawn,          {.v = media_prev }   }, */
 
     { 0, XF86XK_MonBrightnessUp,        spawn,          SHCMD("xbacklight -inc 10") },
     { 0, XF86XK_MonBrightnessDown,      spawn,          SHCMD("xbacklight -dec 10") },
@@ -126,6 +128,8 @@ static const Key keys[] = {
     { MODKEY,               XK_v,       spawn,          SHCMD("greenclip print | grep . | dmenu  -fn  'JetBrainsMono Nerd Font:size=14' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}' ") },
     { MODKEY,               XK_n,       spawn,          SHCMD("~/.dwm/script/network.sh") },
     { MODKEY|ShiftMask,     XK_n,       spawn,          SHCMD("dmenu-bluetooth -fn  'JetBrainsMono Nerd Font:size=14' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -l 20 -p ' '") },
+    { MODKEY|ShiftMask,     XK_d,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t2")},
+
     
     { MODKEY,               XK_u,       spawn,          SHCMD("xmodmap ~/.Xmodmap")},
     { MODKEY,               XK_i,       spawn,          SHCMD("setxkbmap us -variant intl") },
@@ -146,4 +150,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-

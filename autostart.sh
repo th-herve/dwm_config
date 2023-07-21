@@ -1,14 +1,25 @@
 #!/usr/bin/env bash
 
 firefox &
-google-chrome &
+
+if command -v google-chrome &>/dev/null; then
+  google-chrome &
+else
+  google-chrome-stable &
+fi
+
 # spotify &
+
 greenclip daemon &
+
+xmodmap ~/.Xmodmap
 
 # make tab work as mod4 if hold
 # ./script/tab_mod.sh
 
 feh --bg-scale ~/.dwm/cat_desk.png 
+
+
 
 # Bar config
 getDate(){
