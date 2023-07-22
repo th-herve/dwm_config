@@ -20,7 +20,15 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
 feh --bg-scale ~/.dwm/cat_desk.png 
 
+getMute() {
+# get [on] or [off] if mute or not
+isMute=$(amixer get Master | grep Mono: | awk '{ print $NF }')
+percent=$(amixer get Master | grep Mono: | awk '{ print $3 }')
 
+if [ $isMute == "[off]" ] || [ $percent == "0" ]; then
+    echo -e '󰝟'
+fi
+}
 
 # Bar config
 getDate(){
@@ -71,6 +79,6 @@ getBattery() {
 
 
 while true; do
-    xsetroot -name "$(getBattery)    $(getDate)  "
-    sleep 5s
+    xsetroot -name "$(getMute)   $(getBattery)    $(getDate)  "
+    sleep 1s
 done &
