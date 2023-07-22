@@ -11,6 +11,3 @@ mouse_accel_id=$(xinput list-props $mouse_id | awk -F '\(|\)' '/.*Accel Profile 
 
 # remove mouse accel
 xinput set-prop $mouse_id $mouse_accel_id 0, 1 
-
-# set bg
-feh --bg-scale ~/.dwm/cat_desk.png 
