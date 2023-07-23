@@ -14,9 +14,7 @@ greenclip daemon &
 
 xmodmap ~/.Xmodmap
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
-
-# make tab work as mod4 if hold
-# ./script/tab_mod.sh
+./script/tab_mod4.sh
 
 feh --bg-scale ~/.dwm/cat_desk.png 
 
