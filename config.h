@@ -114,11 +114,11 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_6,                      8)
 
     /* custom key */
-    { 0, XF86XK_AudioPlay,          spawn,      {.v = media_toggle } },
-    { 0, XF86XK_AudioLowerVolume,   spawn,      {.v = lower_volume } },
-    { 0, XF86XK_AudioRaiseVolume,   spawn,      {.v = raise_volume } },
-    { 0, XF86XK_AudioNext,          spawn,      {.v = media_next } },
-    { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } },
+    /* { 0, XF86XK_AudioPlay,          spawn,      {.v = media_toggle } }, */
+    /* { 0, XF86XK_AudioLowerVolume,   spawn,      {.v = lower_volume } }, */
+    /* { 0, XF86XK_AudioRaiseVolume,   spawn,      {.v = raise_volume } }, */
+    /* { 0, XF86XK_AudioNext,          spawn,      {.v = media_next } }, */
+    /* { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } }, */
 
     { MODKEY,               XK_c,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t5") },
     { MODKEY|ShiftMask,     XK_d,       spawn,          SHCMD("~/.config/rofi/scripts/launcher_t2") },
