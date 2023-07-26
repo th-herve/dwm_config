@@ -12,9 +12,10 @@ fi
 
 greenclip daemon &
 
+# keyboard setting 
 xmodmap ~/.Xmodmap
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
-./script/tab_mod4.sh
+/bin/bash ~/.dwm/script/tab_mod4.sh
 
 feh --bg-scale ~/.dwm/cat_desk.png 
 
