@@ -26,7 +26,7 @@ getMute() {
     percent=$(amixer get Master | grep Mono: | awk '{ print $3 }')
 
     if [ $isMute == "[off]" ] || [ $percent == "0" ]; then
-        echo -e "󰝟"
+        echo  "󰝟"
     else 
         echo " "
     fi
@@ -34,7 +34,7 @@ getMute() {
 
 getDate(){
     currentDate="$(date +'%H:%M')"
-    echo -e "$currentDate"
+    echo  "$currentDate"
 }
 
 getBattery() {
@@ -43,42 +43,42 @@ getBattery() {
 
     if [ "$state" = "charging" ]; then
         if [ $currentBattery -gt 98 ]; then 
-            echo -e "󰂅"
+            echo  "󰂅"
         elif [ $currentBattery -gt 90 ]; then
-            echo -e "󰂋"
+            echo  "󰂋"
         elif [ $currentBattery -gt 70 ]; then
-            echo -e "󰢞"
+            echo  "󰢞"
         elif [ $currentBattery -gt 60 ]; then
-            echo -e "󰂉"
+            echo  "󰂉"
         elif [ $currentBattery -gt 50 ]; then
-            echo -e "󰢝"
+            echo  "󰢝"
         elif [ $currentBattery -gt 40 ]; then
-            echo -e "󰂈"
+            echo  "󰂈"
         elif [ $currentBattery -gt 30 ]; then
-            echo -e "󰂇"
+            echo  "󰂇"
         elif [ $currentBattery -gt 20 ]; then
-            echo -e "󰂆"
+            echo  "󰂆"
         else
-            echo -e "󰢜"
+            echo  "󰢜"
         fi
         return
     fi
 
     
     if [ $currentBattery -gt 80 ]; then
-        echo -e ""
+        echo  ""
     elif [ $currentBattery -gt 60 ]; then
-        echo -e ""
+        echo  ""
     elif [ $currentBattery -gt 40 ]; then
-        echo -e ""
+        echo  ""
     elif [ $currentBattery -gt 20 ]; then
-        echo -e ""
+        echo  ""
     else
-        echo -e ""
+        echo  ""
     fi
 }
 
 while true; do
-    xsetroot -name " $(getBattery)    $(getDate)  "
-    sleep 5s
+    xsetroot -name "$(getMute)   $(getBattery)    $(getDate)  "
+    sleep 1s
 done &
