@@ -5,6 +5,8 @@ google-chrome &
 spotify &
 greenclip daemon &
 
+picom &
+
 # set up media keys
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
