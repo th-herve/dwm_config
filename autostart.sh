@@ -11,16 +11,13 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 # set bg
 feh --bg-scale ~/.dwm/cat_desk.png 
 
-
-
-
 # Bar config
-getDate(){
+getTime(){
     currentDate="$(date +'%H:%M')"
     echo -e "$currentDate"
 }
 
 while true; do
-    xsetroot -name " $(getDate)"
+    xsetroot -name " $(getTime)"
     sleep 1m
 done &
