@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 firefox &
+# spotify &
+greenclip daemon &
+picom &
 
 if command -v google-chrome &>/dev/null; then
   google-chrome &
@@ -8,9 +11,7 @@ else
   google-chrome-stable &
 fi
 
-# spotify &
 
-greenclip daemon &
 
 # keyboard setting 
 xmodmap ~/.Xmodmap
