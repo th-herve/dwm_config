@@ -2,4 +2,4 @@
 
 rm -rf ./config.h
 
-make clean install
+make install
