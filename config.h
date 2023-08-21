@@ -9,11 +9,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
-static const char col_gray1[]       = "#272E33";
+static const char col_gray1[]       = "#1E2326";
 static const char col_gray2[]       = "#374145";
 static const char col_gray3[]       = "#495156";
 static const char col_gray4[]       = "#D3C6AA";
-static const char col_cyan[]        = "#83C092";
+static const char col_cyan[]        = "#A7C080";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
