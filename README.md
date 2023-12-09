@@ -19,7 +19,7 @@ sudo dnf install make gcc libXft-devel libX11-devel libXinerama-devel
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip && sudo unzip JetBrainsMono.zip -d /usr/share/fonts && rm -f JetBrainsMono.zip
 
 # Others
-sudo apt install feh
+sudo apt install feh flameshot dmenu sxhkd greenclip
 ```
 ### Clone the repo and build it
 
