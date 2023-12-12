@@ -1,4 +1,4 @@
-## Install pach
+## Install patch
 
 patch -p1 < patch-name.diff
 
