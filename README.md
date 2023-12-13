@@ -22,10 +22,10 @@ sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBr
 sudo apt install feh flameshot dmenu sxhkd
 
 # greenclip
-wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip && mv greenclip /usr/local/bin/
+wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip && sudo mv greenclip /usr/local/bin/
 
 # dmenu-bluetooth
-wget "https://raw.githubusercontent.com/Layerex/dmenu-bluetooth/master/dmenu-bluetooth" && install dmenu-bluetooth /usr/local/bin
+wget "https://raw.githubusercontent.com/Layerex/dmenu-bluetooth/master/dmenu-bluetooth" && sudo install dmenu-bluetooth /usr/local/bin
 ```
 ### Clone the repo and build it
 
