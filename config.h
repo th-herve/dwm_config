@@ -138,8 +138,8 @@ static const Key keys[] = {
     {MODKEY, XK_space, focusmaster, {0}},
     {MODKEY, XK_v, spawn,
      SHCMD("greenclip print | grep . | dmenu  -fn  'JetBrainsMono Nerd "
-           "Font:size=10' -nf '#cad3f5'  -nb '#1a1826' -sb '#96cdfb' -sf "
-           "'#1a1826' -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' "
+           "Font:size=10' -nf '#495156'  -nb '#1E2326' -sb '#A7C080' -sf "
+           "'#1E2326' -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' "
            "greenclip print '{}' ")},
     {MODKEY, XK_n, spawn, SHCMD("~/.dwm/script/network.sh")},
 
@@ -147,8 +147,8 @@ static const Key keys[] = {
     {MODKEY, XK_i, spawn, SHCMD("setxkbmap us -variant intl")},
     {MODKEY | ShiftMask, XK_n, spawn,
      SHCMD(
-         "dmenu-bluetooth -fn  'JetBrainsMono Nerd Font:size=10' -nf '#cad3f5' "
-         " -nb '#1a1826' -sb '#96cdfb' -sf '#1a1826' -l 20 -p ' '")},
+         "dmenu-bluetooth -fn  'JetBrainsMono Nerd Font:size=10' -nf '#495156' "
+         " -nb '#1E2326' -sb '#A7C080' -sf '#1E2326' -l 20 -p ' '")},
 };
 
 /* button definitions */
