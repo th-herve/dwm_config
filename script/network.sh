@@ -9,7 +9,7 @@ https://wiki.archlinux.org/index.php/NetworkManager#Set_up_PolicyKit_permissions
 OR running the script as root
 
 Add dmenu options and default terminal if desired to
-~/.config/networkmanager-dmenu/config.ini
+~/.config/networkmanager-dmenu/config.ini   -> been moved to ~/.dwm/script/
 
 """
 import pathlib
@@ -35,7 +35,7 @@ ENV = os.environ.copy()
 ENC = locale.getpreferredencoding()
 
 CONF = configparser.ConfigParser()
-CONF.read(expanduser("~/.config/networkmanager-dmenu/config.ini"))
+CONF.read(expanduser("~/.dwm/script/config.ini"))
 
 
 def cli_args():
