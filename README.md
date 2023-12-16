@@ -2,6 +2,9 @@
 ## Installation
 
 ### Install dwm dependencies
+
+Might work without it though (at least on arch).
+
 ```bash
 # arch
 sudo pacman -S base-devel libx11 libxft libxinerama freetype2 fontconfig
