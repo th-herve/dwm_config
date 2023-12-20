@@ -35,3 +35,43 @@ wget "https://raw.githubusercontent.com/Layerex/dmenu-bluetooth/master/dmenu-blu
 ```bash
 cd && git clone https://github.com/th-herve/dwm_config && mv dwm_config .dwm && cd .dwm && sudo ./make.sh
 ```
+
+## Keybinds
+
+### Dmenu/rofi script
+
+- `Mod-d` -> Dmenu app laucher
+- `Mod-z` -> Start menu
+- `Mod-S-d` -> Rofi app laucher
+- `Mod-v` -> greenclip menu
+- `Mod-n` -> wifi menu
+- `Mod-S-n` -> bluetooth menu
+
+### Navigation and tag
+ 
+- `Mod-[qwe123456]` -> navigate tag
+- `Mod-S-[qwe123456]` -> move window to tag
+- `Mod-C-[qwe123456]` -> add tag to the view
+- `Mod-S-C-[qwe123456]` -> set window to several tag
+- `Mod-0` -> see all tag
+- `Mod-0` -> see all tag
+- `Mod-j/k` -> navigate window
+- `Mod-o/p` -> increase/decrease master windows
+- `Mod-h/l` -> resize master/child windows
+- `Mod-x` -> kill window
+- `Mod-spc` -> toggle master/child
+ 
+### Layouts
+
+- `Mod-t` -> set tile layout
+- `Mod-f` -> set floating layout
+- `Mod-m` -> set monocle layout
+- `Mod-r` -> set deck layout
+- `Mod-S-spc` -> toggle floating window
+
+## Others
+
+- `Mod-return` -> open terminal
+- `Mod-S-c` -> open gnome calculator
+- `Mod-u/i` -> set us/international keyboard
+- `Mod-b` -> toggle bar
