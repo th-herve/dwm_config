@@ -2,10 +2,11 @@
 
 firefox &
 google-chrome &
-spotify &
+spotify-launcher &
 greenclip daemon &
 
 picom &
+dunst &
 
 # set up media keys
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
