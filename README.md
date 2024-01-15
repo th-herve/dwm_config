@@ -61,6 +61,7 @@ cd && git clone https://github.com/th-herve/dwm_config && mv dwm_config .dwm && 
 - `Mod-h/l` -> resize master/child windows
 - `Mod-x` -> kill window
 - `Mod-spc` -> toggle master/child
+- `Mod-S-return` -> swap window between master/child
  
 ### Layouts
 
