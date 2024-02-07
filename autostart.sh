@@ -20,7 +20,16 @@ getTime(){
     echo -e "$currentDate"
 }
 
+getKb(){
+    isIntl=$(setxkbmap -print | grep intl)
+    if [[ -n "$isIntl" ]]; then
+        echo -e ""
+    else
+        echo ""
+    fi
+}
+
 while true; do
-    xsetroot -name " $(getTime)"
-    sleep 1m
+    xsetroot -name "$(getKb)  $(getTime)"
+    sleep 1s
 done &
