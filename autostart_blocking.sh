@@ -14,3 +14,8 @@ mouse_speed_id=$(xinput list-props $mouse_id | awk -F '\\(|\\)' '/.*Accel Speed 
 # remove mouse accel
 xinput set-prop $mouse_id $mouse_accel_id 0, 0, 0
 xinput set-prop $mouse_id $mouse_speed_id -0.5
+
+# set up thumb wheel of mx master 3s
+mx_id=$(xinput | awk -F '=|\\[' '/Logitech USB Receiver Mouse/ { print $2}')
+
+xinput set-button-map $mx_id 1 2 3 4 5 4 5 8 9 10 11 12 13 14 15 16 17 18 19 20 
