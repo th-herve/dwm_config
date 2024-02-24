@@ -12,7 +12,7 @@ dunst &
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
 # set bg
-feh --bg-scale ~/.dwm/wallpaper/forest_stairs.jpg
+feh --bg-scale ~/.dwm/wallpaper/leaves2.png
 
 # Bar config
 getTime(){
