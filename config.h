@@ -92,7 +92,7 @@ static const char *raise_volume[] = {"amixer", "-c",  "1", "sset",
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
-    {MODKEY, XK_d, spawn, {.v = dmenucmd}},
+    {MODKEY, XK_g, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
@@ -105,7 +105,7 @@ static const Key keys[] = {
     {MODKEY, XK_Tab, view, {0}},
     {MODKEY, XK_x, killclient, {0}},
     {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
-    {MODKEY, XK_f, setlayout, {.v = &layouts[1]}},
+    {MODKEY | ShiftMask, XK_f, setlayout, {.v = &layouts[1]}},
     {MODKEY, XK_m, setlayout, {.v = &layouts[2]}},
     {MODKEY, XK_r, setlayout, {.v = &layouts[3]}},
     {MODKEY | ShiftMask, XK_space, setlayout, {0}},
@@ -120,9 +120,15 @@ static const Key keys[] = {
      */
     /* { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
      */
-    TAGKEYS(XK_q, 0) TAGKEYS(XK_w, 1) TAGKEYS(XK_e, 2) TAGKEYS(XK_1, 3)
-        TAGKEYS(XK_2, 4) TAGKEYS(XK_3, 5) TAGKEYS(XK_4, 6) TAGKEYS(XK_5, 7)
-            TAGKEYS(XK_6, 8)
+    TAGKEYS(XK_a, 0) 
+    TAGKEYS(XK_s, 1) 
+    TAGKEYS(XK_d, 2) 
+    TAGKEYS(XK_f, 3)
+    TAGKEYS(XK_q, 4) 
+    TAGKEYS(XK_w, 5) 
+    TAGKEYS(XK_e, 6) 
+    TAGKEYS(XK_5, 7)
+    TAGKEYS(XK_6, 8)
 
     /* custom key */
     /* { 0, XF86XK_AudioPlay,          spawn,      {.v = media_toggle } }, */
