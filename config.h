@@ -40,6 +40,7 @@ static const Rule rules[] = {
     {"Spotify", NULL, NULL, 1 << 6, 0, -1},
     {"steam", NULL, NULL, 1 << 7, 0, -1},
     {"gnome-calculator", NULL, NULL, 0, 1, -1},
+    {"calendar", NULL, NULL, 0, 1, -1, 1628, 20, 290, 230, -1},
 
 };
 
@@ -105,7 +106,7 @@ static const Key keys[] = {
     {MODKEY, XK_Tab, view, {0}},
     {MODKEY, XK_x, killclient, {0}},
     {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
-    {MODKEY | ShiftMask, XK_f, setlayout, {.v = &layouts[1]}},
+    {MODKEY | ShiftMask, XK_b, setlayout, {.v = &layouts[1]}},
     {MODKEY, XK_m, setlayout, {.v = &layouts[2]}},
     {MODKEY, XK_r, setlayout, {.v = &layouts[3]}},
     {MODKEY | ShiftMask, XK_space, setlayout, {0}},
@@ -138,7 +139,7 @@ static const Key keys[] = {
     /* { 0, XF86XK_AudioPrev,          spawn,      {.v = media_prev } }, */
 
     {MODKEY, XK_c, spawn, SHCMD("~/.config/rofi/scripts/launcher_t5")},
-    {MODKEY | ShiftMask, XK_d, spawn,
+    {MODKEY | ShiftMask, XK_g, spawn,
      SHCMD("~/.config/rofi/scripts/launcher_t2")},
     {MODKEY, XK_z, exitdwm, {0}},
     {MODKEY, XK_space, focusmaster, {0}},
@@ -155,6 +156,7 @@ static const Key keys[] = {
      SHCMD(
          "dmenu-bluetooth -fn  'JetBrainsMono Nerd Font:size=10' -nf '#495156' "
          " -nb '#1E2326' -sb '#A7C080' -sf '#1E2326' -l 20 -p ' '")},
+    {MODKEY | ControlMask, XK_c, spawn, SHCMD("kitty --class calendar sh -c 'cal -m -w; read -s -n 1 '")},
 };
 
 /* button definitions */

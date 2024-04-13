@@ -40,6 +40,7 @@ static const Rule rules[] = {
     {"Spotify", NULL, NULL, 1 << 6, 0, -1},
     {"steam", NULL, NULL, 1 << 7, 0, -1},
     {"gnome-calculator", NULL, NULL, 0, 1, -1},
+    {"calendar", NULL, NULL, 0, 1, -1, 1628, 20, 290, 230, -1},
 
 };
 
@@ -155,6 +156,7 @@ static const Key keys[] = {
      SHCMD(
          "dmenu-bluetooth -fn  'JetBrainsMono Nerd Font:size=10' -nf '#495156' "
          " -nb '#1E2326' -sb '#A7C080' -sf '#1E2326' -l 20 -p ' '")},
+    {MODKEY | ControlMask, XK_c, spawn, SHCMD("kitty --class calendar sh -c 'cal -m -w; read -s -n 1 '")},
 };
 
 /* button definitions */
