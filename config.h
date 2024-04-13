@@ -31,15 +31,16 @@ static const Rule rules[] = {
      *	WM_CLASS(STRING) = instance, class
      *	WM_NAME(STRING) = title
      */
-    /* class                instance    title       tags mask     isfloating
+    /* class                instance    title       tags mask     isfloating    float x,y,w,h       float border size(-1=defaut)
        monitor */
-    {"Gimp", NULL, NULL, 0, 1, -1},
+
+	{"Gimp",     NULL,       NULL,       0,            1,           -1,        50,50,500,500,        -1 },
     {"firefox", NULL, NULL, 1 << 1, 0, -1},
     {"Google-chrome", NULL, NULL, 1 << 2, 0, -1},
     {"discord", NULL, NULL, 1 << 5, 0, -1},
     {"Spotify", NULL, NULL, 1 << 6, 0, -1},
     {"steam", NULL, NULL, 1 << 7, 0, -1},
-    {"gnome-calculator", NULL, NULL, 0, 1, -1},
+    {"gnome-calculator", NULL, NULL, 0, 1, -1, 1569, 20, 349, 492, -1},
     {"calendar", NULL, NULL, 0, 1, -1, 1628, 20, 290, 230, -1},
 
 };
