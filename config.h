@@ -40,6 +40,7 @@ static const Rule rules[] = {
     {"discord", NULL, NULL, 1 << 5, 0, -1},
     {"Spotify", NULL, NULL, 1 << 6, 0, -1},
     {"steam", NULL, NULL, 1 << 7, 0, -1},
+    {"lutris", NULL, NULL, 1 << 7, 0, -1},
     {"gnome-calculator", NULL, NULL, 0, 1, -1, 1569, 20, 349, 492, -1},
     {"calendar", NULL, NULL, 0, 1, -1, 1628, 20, 290, 230, -1},
 
