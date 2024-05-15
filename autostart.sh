@@ -8,6 +8,12 @@ greenclip daemon &
 picom &
 dunst &
 
+if tmux ls; then
+    kitty sh -c 'tmux a; exec zsh' &
+else
+    kitty sh -c 'tmux; exec zsh' &
+fi
+
 # set up media keys
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
