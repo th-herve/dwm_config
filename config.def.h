@@ -159,6 +159,8 @@ static const Key keys[] = {
          "dmenu-bluetooth -fn  'JetBrainsMono Nerd Font:size=10' -nf '#495156' "
          " -nb '#1E2326' -sb '#A7C080' -sf '#1E2326' -l 20 -p ' '")},
     {MODKEY | ControlMask, XK_c, spawn, SHCMD("kitty --class calendar sh -c 'cal -m -w; read -s -n 1 '")},
+
+    {MODKEY | ShiftMask, XK_m, spawn, SHCMD("~/programming/python/spotipy/dmenu_spotify_playlist.sh")},
 };
 
 /* button definitions */
