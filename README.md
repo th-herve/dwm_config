@@ -66,7 +66,7 @@ cd && git clone https://github.com/th-herve/dwm_config && mv dwm_config .dwm && 
 ### Layouts
 
 - `Mod-t` -> set tile layout
-- `Mod-f` -> set floating layout
+- `Mod-S-b` -> set floating layout
 - `Mod-m` -> set monocle layout
 - `Mod-r` -> set deck layout
 - `Mod-S-spc` -> toggle floating window
