@@ -11,7 +11,11 @@ else
   google-chrome-stable &
 fi
 
-
+if tmux ls; then
+    kitty sh -c 'tmux a; exec zsh' &
+else
+    kitty sh -c 'tmux; exec zsh' &
+fi
 
 # keyboard setting 
 xmodmap ~/.Xmodmap
