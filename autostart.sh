@@ -23,8 +23,8 @@ feh --bg-scale ~/.dwm/cat_desk.png
 # Bar config
 getMute() {
     # get [on] or [off] if mute or not
-    isMute=$(amixer get Master | grep Mono: | awk '{ print $NF }')
-    percent=$(amixer get Master | grep Mono: | awk '{ print $3 }')
+    isMute=$(amixer get Master | grep Left | awk '{ print $NF }')
+    percent=$(amixer get Master | grep Left | awk '{ print $3 }')
 
     if [ $isMute == "[off]" ] || [ $percent == "0" ]; then
         echo  "󰝟"
@@ -39,47 +39,49 @@ getDate(){
 }
 
 getBattery() {
+
+
     state="$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state | awk '{ print $2 }')"
     currentBattery="$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{ print $2 }' | awk -F'%' '{print $1}')"
 
     if [ "$state" = "charging" ]; then
         if [ $currentBattery -gt 98 ]; then 
-            echo  "󰂅"
+            echo  "$currentBattery 󰂅"
         elif [ $currentBattery -gt 90 ]; then
-            echo  "󰂋"
+            echo  "$currentBattery 󰂋"
         elif [ $currentBattery -gt 70 ]; then
-            echo  "󰢞"
+            echo  "$currentBattery 󰢞"
         elif [ $currentBattery -gt 60 ]; then
-            echo  "󰂉"
+            echo  "$currentBattery 󰂉"
         elif [ $currentBattery -gt 50 ]; then
-            echo  "󰢝"
+            echo  "$currentBattery 󰢝"
         elif [ $currentBattery -gt 40 ]; then
-            echo  "󰂈"
+            echo  "$currentBattery 󰂈"
         elif [ $currentBattery -gt 30 ]; then
-            echo  "󰂇"
+            echo  "$currentBattery 󰂇"
         elif [ $currentBattery -gt 20 ]; then
-            echo  "󰂆"
+            echo  "$currentBattery 󰂆"
         else
-            echo  "󰢜"
+            echo  "$currentBattery 󰢜"
         fi
         return
     fi
 
     
     if [ $currentBattery -gt 80 ]; then
-        echo  ""
+        echo  "$currentBattery "
     elif [ $currentBattery -gt 60 ]; then
-        echo  ""
+        echo  "$currentBattery "
     elif [ $currentBattery -gt 40 ]; then
-        echo  ""
+        echo  "$currentBattery "
     elif [ $currentBattery -gt 20 ]; then
-        echo  ""
+        echo  "$currentBattery "
     else
-        echo  ""
+        echo  "$currentBattery "
     fi
 }
 
 while true; do
-    xsetroot -name "$(getMute)   $(getBattery)    $(getDate)  "
+    xsetroot -name " $(getBattery)    $(getDate)  "
     sleep 1s
 done &
