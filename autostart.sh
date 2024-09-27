@@ -4,6 +4,7 @@ firefox &
 # spotify &
 greenclip daemon &
 picom &
+dunst &
 
 if command -v google-chrome &>/dev/null; then
   google-chrome &
