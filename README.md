@@ -1,4 +1,5 @@
 # Dwm config
+ 
 ## Installation
 
 ### Install dwm dependencies
@@ -17,12 +18,14 @@ sudo dnf install make gcc libXft-devel libX11-devel libXinerama-devel
 ```
 ## Install config dependencies
 
+Install unzip and wget before installing the others.
+
 ```bash
 # Jet Brain nerd font
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip && sudo unzip JetBrainsMono.zip -d /usr/share/fonts && rm -f JetBrainsMono.zip
 
 # Others
-sudo apt install feh flameshot dmenu sxhkd
+sudo pacman -S feh flameshot dmenu sxhkd
 
 # greenclip
 wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip && sudo mv greenclip /usr/local/bin/ 
