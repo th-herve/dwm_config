@@ -31,16 +31,17 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class                instance        title           tags mask   isfloating  monitor */
-    {"firefox",             NULL,           NULL,           1 << 1,     0,          -1},
+    // {"firefox",             NULL,           NULL,           1 << 1,     0,          -1},
     {"Google-chrome",       NULL,           NULL,           1 << 2,     0,          -1},
     {"discord",             NULL,           NULL,           1 << 5,     0,          -1},
     {"Spotify",             NULL,           NULL,           1 << 6,     0,          -1},
     {"steam",               NULL,           NULL,           1 << 7,     0,          -1},
     {"Lutris",              NULL,           NULL,           1 << 7,     0,          -1},
     /*                                                                                          float x,y,w,h           floatborderpx */
-	{"Gimp",                NULL,           NULL,           0,          1,          -1,         50,50,500,500,          -1},
+    {"Gimp",                NULL,           NULL,           0,          1,          -1,         50,50,500,500,          -1},
     {"gnome-calculator",    NULL,           NULL,           0,          1,          -1,         1569, 20, 349, 492,     -1},
     {"calendar",            NULL,           NULL,           0,          1,          -1,         1628, 20, 290, 230,     -1},
+    // firefox detachable video player
     { NULL,                 NULL,   "Picture-in-Picture",   -1,         1,          -1,         1327, 712, 591, 366,    -1},
 
 };

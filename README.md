@@ -37,6 +37,18 @@ wget "https://raw.githubusercontent.com/Layerex/dmenu-bluetooth/master/dmenu-blu
 cd && git clone https://github.com/th-herve/dwm_config && mv dwm_config .dwm && cd .dwm && sudo ./make.sh
 ```
 
+### Start dwm when x start
+
+```bash
+# copy the xinitrc in the home folder
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+
+# open the .xinitrc file delete everything except the first line and add:
+dwm
+```
+
+run `startx` to launch dwm.
+
 ## Keybinds
 
 ### Dmenu/rofi script
