@@ -3,12 +3,12 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int   borderpx    = 1; /* border pixel of windows */
+static const unsigned int   borderpx    = 2; /* border pixel of windows */
 static const unsigned int   snap        = 32;    /* snap pixel */
 static const int            showbar     = 1;           /* 0 means no bar */
 static const int            topbar      = 1;            /* 0 means bottom bar */
-static const char           *fonts[]    = {"JetBrainsMono Nerd Font:size=10"};
-static const char           dmenufont[] = "JetBrainsMono Nerd Font:size=10";
+static const char           *fonts[]    = {"JetBrainsMono Nerd Font:size=12"};
+static const char           dmenufont[] = "JetBrainsMono Nerd Font:size=12";
 static const char           col_bg[]    = "#1E2326";
 static const char           col_gray[]  = "#374145";
 static const char           col_fg2[]   = "#495156";
@@ -40,7 +40,7 @@ static const Rule rules[] = {
     /*                                                                                          float x,y,w,h           floatborderpx */
     {"Gimp",                NULL,           NULL,           0,          1,          -1,         50,50,500,500,          -1},
     {"gnome-calculator",    NULL,           NULL,           0,          1,          -1,         1569, 20, 349, 492,     -1},
-    {"calendar",            NULL,           NULL,           0,          1,          -1,         1628, 20, 290, 230,     -1},
+    {"calendar",            NULL,           NULL,           0,          1,          -1,         2000, 20, 320, 260,     -1},
     // firefox detachable video player
     { NULL,                 NULL,   "Picture-in-Picture",   -1,         1,          -1,         1327, 712, 591, 366,    -1},
 

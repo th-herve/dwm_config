@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 
-firefox &
-google-chrome &
+# firefox &
+# google-chrome &
+/usr/local/bin/zen-x86_64.AppImage &
 spotify-launcher &
 greenclip daemon &
 
 picom &
 dunst &
 
-if tmux ls; then
-    kitty sh -c 'tmux a; exec zsh' &
-else
-    kitty sh -c 'tmux; exec zsh' &
-fi
+# if tmux ls; then
+#     kitty sh -c 'tmux a; exec zsh' &
+# else
+#     kitty sh -c 'tmux; exec zsh' &
+# fi
 
 # set up media keys
 sxhkd -c ~/.config/sxhkd/sxhkdrc &

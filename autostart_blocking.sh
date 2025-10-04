@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-xrandr -r 144
+xrandr -r 240
 
 # set mouse setting
 # get the mouse id
